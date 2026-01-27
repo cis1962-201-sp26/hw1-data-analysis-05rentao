@@ -88,7 +88,7 @@ describe('Sentiment Analysis', () => {
     });
 
     it('correctly structures the objects within the array returned from sentimentAnalysisLang, and returns the right number of negative, neutral, and positive reviews. Tests for the sample language es.', () => {
-        const es = sentimentAnalysisLang(cleaned).find((lang) => lang.lang_name === 'es');
+        const es = sentimentAnalysisLang(cleaned).find((lang) => lang.review_language === 'es');
         assert.strictEqual(es.positive, 30);
         assert.strictEqual(es.neutral, 52);
         assert.strictEqual(es.negative, 22);
